@@ -1,0 +1,31 @@
+body{
+    background-color: rgb(244,244,244);
+}
+.container{
+    background-color: white;
+    width: 700px;
+    margin: auto;
+    margin-top: 40px;
+    padding: 20px;
+    box-shadow: rgba(0, 0 , 0, 0.1) 0px 4px 12px;
+}
+*{
+    outline: none;
+}
+input[type=text]{
+    padding: 4px;
+    width: 365px;
+}
+input[type=button]{
+    height: 27px;
+}
+.base64-output{
+    margin: 20px auto;
+    padding: 4px;
+    caret-color: white;
+}
+textarea{
+    width: 690px;
+    height: 200px;
+    padding: 4px;
+}
