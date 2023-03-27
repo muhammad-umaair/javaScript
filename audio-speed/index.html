@@ -1,0 +1,44 @@
+<audio id="myAudio">
+  <source src="test.mp3" type="audio/mp3" />
+</audio>
+
+<div id="audio-controls">
+  <button id="play-btn">Play</button>
+  <button id="pause-btn">Pause</button>
+  <button id="speed-btn">Speed: 1x</button>
+</div>
+
+<script>
+  var audio = document.getElementById("myAudio");
+  var playBtn = document.getElementById("play-btn");
+  var pauseBtn = document.getElementById("pause-btn");
+  var speedBtn = document.getElementById("speed-btn");
+
+  // Set default speed to 1x
+  var speed = 1;
+
+  // When play button is clicked, play audio
+  playBtn.addEventListener("click", function () {
+    audio.play();
+  });
+
+  // When pause button is clicked, pause audio
+  pauseBtn.addEventListener("click", function () {
+    audio.pause();
+  });
+
+  // When speed button is clicked, change playback speed
+  speedBtn.addEventListener("click", function () {
+    if (speed === 1) {
+      speed = 1.5;
+      speedBtn.innerHTML = "Speed: 1.5x";
+    } else if (speed === 1.5) {
+      speed = 2;
+      speedBtn.innerHTML = "Speed: 2x";
+    } else {
+      speed = 1;
+      speedBtn.innerHTML = "Speed: 1x";
+    }
+    audio.playbackRate = speed;
+  });
+</script>
